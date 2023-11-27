@@ -53,63 +53,62 @@ def text_to_morse(letter):
         return "--.."  
     elif letter == " ":
         return " "
-    else:
-        return "Error What you have entered cant be encrypted"
+
     
-def morse_to_text(letter):
-    if letter == '.-':
+def morse_to_text(dot):
+    if dot == '.-':
         return "A"
-    elif letter == '-...':
+    elif dot == '-...':
         return "B"
-    elif letter == '-.-.':
+    elif dot == '-.-.':
         return "C"
-    elif letter == '-..':
+    elif dot == '-..':
         return "D"
-    elif letter == '.':
+    elif dot == '.':
         return "E"
-    elif letter == '..-.':
+    elif dot == '..-.':
         return "F"
-    elif letter == '--.':
+    elif dot == '--.':
         return "G"
-    elif letter == '....':
+    elif dot == '....':
         return "H"
-    elif letter == '..':
+    elif dot == '..':
         return "I"
-    elif letter == '.---':
+    elif dot == '.---':
         return "J"
-    elif letter == '-.-':
+    elif dot == '-.-':
         return "K"
-    elif letter == '.-..':
+    elif dot == '.-..':
         return "L"
-    elif letter == '--':
+    elif dot == '--':
         return "M"
-    elif letter == '-.':
+    elif dot == '-.':
         return "N"
-    elif letter == '---':
+    elif dot == '---':
         return "O"
-    elif letter == '.--.':
+    elif dot == '.--.':
         return "P"
-    elif letter == '--.-':
+    elif dot == '--.-':
         return "Q"
-    elif letter == '.-.':
+    elif dot == '.-.':
         return "R"
-    elif letter == '...':
+    elif dot == '...':
         return "S"
-    elif letter == '-':
+    elif dot == '-':
         return "T"
-    elif letter == '..-':
+    elif dot == '..-':
         return "U"
-    elif letter == '...-':
+    elif dot == '...-':
         return "V"
-    elif letter == '.--':
+    elif dot == '.--':
         return "W"
-    elif letter == '-..-':
+    elif dot == '-..-':
         return "X"
-    elif letter == '-.--':
+    elif dot == '-.--':
         return "Y"
-    elif letter == '--..':
+    elif dot == '--..':
         return "Z"  
-    elif letter == " ":
+    elif dot == " ":
         return " "
     else:
         return "Error What you have entered cant be decrypted"
@@ -125,8 +124,8 @@ def string_to_morse(text):
 
 def morsestr(text):
     morse_code = ""
-    for letter in text:
-        morse_code += morse_to_text(letter) + " "
+    for dot in text:
+        morse_code += morse_to_text(dot) + " "
     return morse_code
 
 if __name__ == "__main__":
