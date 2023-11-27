@@ -51,7 +51,11 @@ def text_to_morse(character):
         return "-.--"
     elif character == 'Z':
         return "--.."  
-
+    elif character == " ":
+        return " "
+    else:
+        return "Error What you have entered cant be encrypted"
+    
  
     
     
