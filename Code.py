@@ -134,11 +134,13 @@ if __name__ == "__main__":
     print("2.Decryption")
     print("3.To Stop")
 
-    ans == (input:"Whats your choice?")
+    choice = input("Whats your choice?")
     
-    if ans == 1:
+    if choice == "1" :
         inputxt = input("Enter a word or sentence to Encrypt")
-
+        encrypted = text_to_morse(inputxt.upper())
+        print = ("Morse Code:", encrypted)
+    
 
 
     
