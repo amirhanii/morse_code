@@ -113,25 +113,32 @@ def morse_to_text(dot):
     else:
         return "Error What you have entered cant be decrypted"
     
-    
  
     
 def string_to_morse(text):
     morse_code = ""
     for letter in text:
-        morse_code += text_to_morse(letter) + " "
+        morse_code += text_to_morse(letter) + " / "
     return morse_code
 
-def morsestr(text):
-    morse_code = ""
-    for dot in text:
-        morse_code += morse_to_text(dot) + " "
-    return morse_code
+def morsestr(morse_code):
+    morse_elements = morse_code.split(' ')
+    text = ""
+    for element in morse_elements:
+        text += morse_to_text(element)
+    return text
 
 if __name__ == "__main__":
-    input_text = input("Enter text to encrypt into Morse code: ")
-    encrypted_text = string_to_morse(input_text.upper())
-    print("Morse code:", encrypted_text)
+    print("Choose an option:")
+    print("1.Encryption")
+    print("2.Decryption")
+    print("3.To Stop")
+
+    ans == (input:"Whats your choice?")
+    
+    if ans == 1:
+        inputxt = input("Enter a word or sentence to Encrypt")
+
 
 
     
