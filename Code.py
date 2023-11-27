@@ -91,24 +91,24 @@ def morse_to_text(letter):
         return "P"
     elif letter == '--.-':
         return "Q"
-    elif letter == 'R':
-        return ".-."
-    elif letter == 'S':
-        return "..."
-    elif letter == 'T':
-        return "-"
-    elif letter == 'U':
-        return "..-"
-    elif letter == 'V':
-        return "...-"
-    elif letter == 'W':
-        return ".--"
-    elif letter == 'X':
-        return "-..-"
-    elif letter == 'Y':
-        return "-.--"
-    elif letter == 'Z':
-        return "--.."  
+    elif letter == '.-.':
+        return "R"
+    elif letter == '...':
+        return "S"
+    elif letter == '-':
+        return "T"
+    elif letter == '..-':
+        return "U"
+    elif letter == '...-':
+        return "V"
+    elif letter == '.--':
+        return "W"
+    elif letter == '-..-':
+        return "X"
+    elif letter == '-.--':
+        return "Y"
+    elif letter == '--..':
+        return "Z"  
     elif letter == " ":
         return " "
     else:
