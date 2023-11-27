@@ -112,9 +112,27 @@ def morse_to_text(letter):
     elif letter == " ":
         return " "
     else:
-        return "Error What you have entered cant be encrypted"
+        return "Error What you have entered cant be decrypted"
+    
     
  
     
-    
+def string_to_morse(text):
+    morse_code = ""
+    for letter in text:
+        morse_code += text_to_morse(letter) + " "
+    return morse_code
+
+def morsestr(text):
+    morse_code = ""
+    for letter in text:
+        morse_code += morse_to_text(letter) + " "
+    return morse_code
+
+if __name__ == "__main__":
+    input_text = input("Enter text to encrypt into Morse code: ")
+    encrypted_text = string_to_morse(input_text.upper())
+    print("Morse code:", encrypted_text)
+
+
     
