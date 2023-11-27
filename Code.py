@@ -137,10 +137,17 @@ if __name__ == "__main__":
     choice = input("Whats your choice?")
     
     if choice == "1" :
-        inputxt = input("Enter a word or sentence to Encrypt")
-        encrypted = text_to_morse(inputxt.upper())
-        print = ("Morse Code:", encrypted)
-    
+        inputxt = input("Enter a word or sentence to Encrypt: ")
+        encrypted = string_to_morse(inputxt.upper())
+        print ("Morse Code:", encrypted)
+    elif choice == "2" :
+        input_morse = input("Enter a MorseCode to Decrypt: ")
+        decrypted = morsestr(input_morse)
+        print ("The Word is:", decrypted)
+    elif choice == "3" :
+        exit()
+    else:
+        print ("Your Input is not relevant")    
 
 
     
