@@ -1,57 +1,115 @@
-def text_to_morse(character):
-    if character == 'A':
+def text_to_morse(letter):
+    if letter == 'A':
         return ".-"
-    elif character == 'B':
+    elif letter == 'B':
         return "-..."
-    elif character == 'C':
+    elif letter == 'C':
         return "-.-."
-    elif character == 'D':
+    elif letter == 'D':
         return "-.."
-    elif character == 'E':
+    elif letter == 'E':
         return "."
-    elif character == 'F':
+    elif letter == 'F':
         return "..-."
-    elif character == 'G':
+    elif letter == 'G':
         return "--."
-    elif character == 'H':
+    elif letter == 'H':
         return "...."
-    elif character == 'I':
+    elif letter == 'I':
         return ".."
-    elif character == 'J':
+    elif letter == 'J':
         return ".---"
-    elif character == 'K':
+    elif letter == 'K':
         return "-.-"
-    elif character == 'L':
+    elif letter == 'L':
         return ".-.."
-    elif character == 'M':
+    elif letter == 'M':
         return "--"
-    elif character == 'N':
+    elif letter == 'N':
         return "-."
-    elif character == 'O':
+    elif letter == 'O':
         return "---"
-    elif character == 'P':
+    elif letter == 'P':
         return ".--."
-    elif character == 'Q':
+    elif letter == 'Q':
         return "--.-"
-    elif character == 'R':
+    elif letter == 'R':
         return ".-."
-    elif character == 'S':
+    elif letter == 'S':
         return "..."
-    elif character == 'T':
+    elif letter == 'T':
         return "-"
-    elif character == 'U':
+    elif letter == 'U':
         return "..-"
-    elif character == 'V':
+    elif letter == 'V':
         return "...-"
-    elif character == 'W':
+    elif letter == 'W':
         return ".--"
-    elif character == 'X':
+    elif letter == 'X':
         return "-..-"
-    elif character == 'Y':
+    elif letter == 'Y':
         return "-.--"
-    elif character == 'Z':
+    elif letter == 'Z':
         return "--.."  
-    elif character == " ":
+    elif letter == " ":
+        return " "
+    else:
+        return "Error What you have entered cant be encrypted"
+    
+def morse_to_text(letter):
+    if letter == '.-':
+        return "A"
+    elif letter == '-...':
+        return "B"
+    elif letter == '-.-.':
+        return "C"
+    elif letter == '-..':
+        return "D"
+    elif letter == '.':
+        return "E"
+    elif letter == '..-.':
+        return "F"
+    elif letter == '--.':
+        return "G"
+    elif letter == '....':
+        return "H"
+    elif letter == '..':
+        return "I"
+    elif letter == '.---':
+        return "J"
+    elif letter == '-.-':
+        return "K"
+    elif letter == '.-..':
+        return "L"
+    elif letter == '--':
+        return "M"
+    elif letter == '-.':
+        return "N"
+    elif letter == '---':
+        return "O"
+    elif letter == '.--.':
+        return "P"
+    elif letter == '--.-':
+        return "Q"
+    elif letter == 'R':
+        return ".-."
+    elif letter == 'S':
+        return "..."
+    elif letter == 'T':
+        return "-"
+    elif letter == 'U':
+        return "..-"
+    elif letter == 'V':
+        return "...-"
+    elif letter == 'W':
+        return ".--"
+    elif letter == 'X':
+        return "-..-"
+    elif letter == 'Y':
+        return "-.--"
+    elif letter == 'Z':
+        return "--.."  
+    elif letter == " ":
         return " "
     else:
         return "Error What you have entered cant be encrypted"
