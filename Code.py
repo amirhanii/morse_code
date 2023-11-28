@@ -53,6 +53,8 @@ def text_to_morse(letter):
         return "--.."  
     elif letter == " ":
         return " "
+    else:
+        return "what you have entered cant be encrypted, please enter only letters"
 
     
 def morse_to_text(dot):
@@ -111,7 +113,7 @@ def morse_to_text(dot):
     elif dot == " ":
         return " "
     else:
-        return "Error What you have entered cant be decrypted"
+        return "Error What you have entered cant be decrypted, please only enter dots and dashes (.)(-) and not letters"
     
  
     
