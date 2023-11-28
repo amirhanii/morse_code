@@ -138,12 +138,18 @@ if __name__ == "__main__":
     
     if choice == "1" :
         inputxt = input("Enter a word or sentence to Encrypt: ")
-        encrypted = string_to_morse(inputxt.upper())
-        print ("Morse Code:", encrypted)
+        if inputxt.isdigit():
+            print ("Sorry this Program is not Designed to Encrypt Numbers") 
+        else:   
+            encrypted = string_to_morse(inputxt.upper())
+            print ("Morse Code:", encrypted)
     elif choice == "2" :
         input_morse = input("Enter a MorseCode to Decrypt: ")
-        decrypted = morsestr(input_morse)
-        print ("The Word is:", decrypted)
+        if input_morse.isdigit():
+            print ("Sorry this Program is not Designed to Decrypt Numbers") 
+        else:
+            decrypted = morsestr(input_morse)
+            print ("The Word is:", decrypted)
     elif choice == "3" :
         exit()
     else:
