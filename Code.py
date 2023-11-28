@@ -1,4 +1,4 @@
-def text_to_morse(letter):
+def text_to_morse(letter): #if functions to convert from letters to morse code
     if letter == 'A':
         return ".-"
     elif letter == 'B':
@@ -51,13 +51,13 @@ def text_to_morse(letter):
         return "-.--"
     elif letter == 'Z':
         return "--.."  
-    elif letter == " ":
+    elif letter == " ": #conversion to keep spaces
         return " "
-    else:
+    else: #error handling
         return "what you have entered cant be encrypted, please enter only letters"
 
     
-def morse_to_text(dot):
+def morse_to_text(dot):    #if functions to convert from morse code to letters
     if dot == '.-':
         return "A"
     elif dot == '-...':
@@ -110,40 +110,40 @@ def morse_to_text(dot):
         return "Y"
     elif dot == '--..':
         return "Z"  
-    elif dot == " ":
+    elif dot == " ": #condition for spaces
         return " "
-    else:
+    else:    #error handling
         return "Error What you have entered cant be decrypted, please only enter dots and dashes (.)(-) and not letters"
     
  
     
-def string_to_morse(text):
+def string_to_morse(text): #function to convert from string to morse code
     morse_code = ""
     for letter in text:
         morse_code += text_to_morse(letter) + " / "
     return morse_code
 
-def morsestr(morse_code):
+def morsestr(morse_code): #function to convert from morse code to string
     morse_elements = morse_code.split(' ')
     text = ""
-    for element in morse_elements:
+    for element in morse_elements: #for loop conversion 
         text += morse_to_text(element)
     return text
 
-if __name__ == "__main__":
+if __name__ == "__main__": #menu
     print("Choose an option:")
     print("1.Encryption")
     print("2.Decryption")
-    print("3.To Stop")
+    print("3.To Stop") #option to terminate program
 
-    choice = input("Whats your choice?")
+    choice = input("Whats your choice?") 
     
     if choice == "1" :
         inputxt = input("Enter a word or sentence to Encrypt: ")
-        if inputxt.isdigit():
+        if inputxt.isdigit(): #if condition to ensure that the input isnt a number
             print ("Sorry this Program is not Designed to Encrypt Numbers") 
         else:   
-            encrypted = string_to_morse(inputxt.upper())
+            encrypted = string_to_morse(inputxt.upper()) #.upper is a predefined function the converts all letters to upper case
             print ("Morse Code:", encrypted)
     elif choice == "2" :
         input_morse = input("Enter a MorseCode to Decrypt: ")
