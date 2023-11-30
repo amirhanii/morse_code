@@ -120,15 +120,19 @@ def morse_to_text(dot):    #if functions to convert from morse code to letters
 def string_to_morse(text): #function to convert from string to morse code
     morse_code = ""
     for letter in text:
-        morse_code += text_to_morse(letter) + " / "
+        morse_code += text_to_morse(letter) + "/"
     return morse_code
 
+
+
 def morsestr(morse_code): #function to convert from morse code to string
-    morse_elements = morse_code.split(' ')
+    morse_elements = morse_code.split('/')
     text = ""
     for element in morse_elements: #for loop conversion 
         text += morse_to_text(element)
     return text
+
+
 
 if __name__ == "__main__": #menu
     print("Choose an option:")
@@ -145,8 +149,8 @@ if __name__ == "__main__": #menu
         else:   
             encrypted = string_to_morse(inputxt.upper()) #.upper is a predefined function the converts all letters to upper case
             print ("Morse Code:", encrypted)
-    elif choice == "2" :
-        input_morse = input("Enter a MorseCode to Decrypt: ")
+    elif choice == "2" :    
+        input_morse = input("Enter a MorseCode to Decrypt, seperate the code with dashes and not spaces: ")
         if input_morse.isdigit():
             print ("Sorry this Program is not Designed to Decrypt Numbers") 
         else:
@@ -155,7 +159,6 @@ if __name__ == "__main__": #menu
     elif choice == "3" :
         exit()
     else:
-        print ("Your Input is not relevant")    
-
+        print ("Your Input is not relevant") 
 
     
